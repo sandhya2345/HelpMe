@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Adoption Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"> <i class="fas fa-paw"></i> Help Me!</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About us</a>
+            <a href="#Pets">Find a Pet</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="user-form">
+            <a href="login.html"><button>Log In</button></a>
+            <a href="signup.html"><button>Sign Up</button></a>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3> <span>Hello!</span> Welcome to Pet Adoption Website</h3>
+            <a href="#Pets" class="btn">Adopt now</a>
+        </div>
+    </section>
+
+    <div class="heading" id="heading">
+        <h2>Who are We?</h2>
+    </div>
+    <!-- About section -->
+    <section class="about" id="about">
+        <div class="image">
+            <img src="images/about_pic3.jpg" alt="About Us">
+        </div>
+        <div class="content">
+            <br><br><br><br><br><br><br><br><br>
+            <h3>About <span> Help Me!</span> Website</h3>
+            <p>
+                Welcome to HelpMe, your trusted partner in pet adoption! We are passionate about connecting loving families with pets in need of forever homes. At HelpMe, we believe that every pet deserves a chance at happiness, and we are dedicated to making the adoption process as smooth and joyful as possible for both the pets and the adopters.
+                <b>Our Mission</b>
+
+                At HelpMe, our mission is to facilitate successful and compassionate pet adoptions. We strive to create a community where every pet has a loving home, and every person seeking a pet finds their perfect companion. We work closely with animal shelters and rescue organizations to provide a comprehensive platform where potential adopters can find detailed information about available pets and make informed decisions about their new family members.
+                
+            </p>
+            <a href="#" class="btn">Learn more</a>
+        </div>
+    </section>
+
+    <!-- Shop section or adoption -->
+
+    <section class="shop" id="Pets">
+        <h1 class="heading" style="margin-top: -70px;">Our <span>Pets</span></h1>
+        <div class="pet-list">
+            <!-- Pet Card Template -->
+            <div class="box">
+                <div class="icons">
+                    <button class="fas fa-shopping-cart" onclick="addToCart('pet_id')" data-animal-name="German Shepherd" data-price="1500" style="font-size: 25px; margin-left: 20px;"></button>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/image11.jpg" alt="Pet Image">
+                </div>
+                <div class="content">
+                    <h2 style="color:rgb(10, 10, 10);">JOY (Street Cat)</h2>
+                    <div class="amount">$15.00 - $30.00</div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <button class="fas fa-shopping-cart" onclick="addToCart('pet_id')" data-animal-name="German Shepherd" data-price="1500" style="font-size: 25px; margin-left: 20px;"></button>
+                    <a href="cart.html" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/image11.jpg" alt="Pet Image">
+                </div>
+                <div class="content">
+                    <h2 style="color:rgb(10, 10, 10);">JOY (Street Cat)</h2>
+                    <div class="amount">$15.00 - $30.00</div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <button class="fas fa-shopping-cart" onclick="addToCart('pet_id')" data-animal-name="German Shepherd" data-price="1500" style="font-size: 25px; margin-left: 20px;"></button>
+                    <a href="cart.html" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/a2.jpg" alt="Pet Image">
+                </div>
+                <div class="content">
+                    <h2 style="color:rgb(10, 10, 10);">JOY (Street Cat)</h2>
+                    <div class="amount">$15.00 - $30.00</div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <button class="fas fa-shopping-cart" onclick="addToCart('pet_id')" data-animal-name="German Shepherd" data-price="1500" style="font-size: 25px; margin-left: 20px;"></button>
+                    <a href="cart.html" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/a1.jpg" alt="Pet Image">
+                </div>
+                <div class="content">
+                    <h2 style="color:rgb(10, 10, 10);">JOY (Street Cat)</h2>
+                    <div class="amount">$15.00 - $30.00</div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <button class="fas fa-shopping-cart" onclick="addToCart('pet_id')" data-animal-name="German Shepherd" data-price="1500" style="font-size: 25px; margin-left: 20px;"></button>
+                    <a href="cart.html" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/a4.jpg" alt="Pet Image">
+                </div>
+                <div class="content">
+                    <h2 style="color:rgb(10, 10, 10);">JOY (Street Cat)</h2>
+                    <div class="amount">$15.00 - $30.00</div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <button class="fas fa-shopping-cart" onclick="addToCart('pet_id')" data-animal-name="German Shepherd" data-price="1500" style="font-size: 25px; margin-left: 20px;"></button>
+                    <a href="cart.html" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/a4.jpg" alt="Pet Image">
+                </div>
+                <div class="content">
+                    <h2 style="color:rgb(10, 10, 10);">JOY (Street Cat)</h2>
+                    <div class="amount">$15.00 - $30.00</div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <button class="fas fa-shopping-cart" onclick="addToCart('pet_id')" data-animal-name="German Shepherd" data-price="1500" style="font-size: 25px; margin-left: 20px;"></button>
+                    <a href="cart.html" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/a4.jpg" alt="Pet Image">
+                </div>
+                <div class="content">
+                    <h2 style="color:rgb(10, 10, 10);">JOY (Street Cat)</h2>
+                    <div class="amount">$15.00 - $30.00</div>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="icons">
+                    <button class="fas fa-shopping-cart" onclick="addToCart('pet_id')" data-animal-name="German Shepherd" data-price="1500" style="font-size: 25px; margin-left: 20px;"></button>
+                    <a href="cart.html" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/a4.jpg" alt="Pet Image">
+                </div>
+                <div class="content">
+                    <h2 style="color:rgb(10, 10, 10);">JOY (Street Cat)</h2>
+                    <div class="amount">$15.00 - $30.00</div>
+                </div>
+            </div>
+    
+            <!-- Add more pet cards here... -->
+    
+        </div>
+    </section>
+
+    <!-- Services section -->
+    <section class="services"  style="font-size: 20px; margin-top: -100px;" id="services">
+        <h1 class="heading"> Our <span>Services</span></h1>
+        <div class="service-list">
+            <div class="box">
+                <i class="fas fa-dog"></i>
+                <h3>Animal shelter</h3>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-cat"></i>
+                <h3>Veterinary care</h3>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-paw"></i>
+                <h3>Active Exercise</h3>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="box">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Health care</h3>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact" style="font-size: 20px; margin-top: -100px;" id="contact">
+        <h2 class="heading"> Lets <span>Talk</span></h2>
+        <div class="contact-container">
+            <div class="image">
+                <img src="images/a5.jpg" alt="Contact Us">
+            </div>
+            <form action="#" class="contact-form">
+                <h3>Contact Us</h3>
+                <input type="text" placeholder="Your Name" class="input-box">
+                <input type="email" placeholder="Your Email" class="input-box">
+                <input type="tel" placeholder="Your Phone Number" class="input-box">
+                <textarea placeholder="Your Message" class="input-box textarea-box" rows="6"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3><i class="fas fa-paw"></i> HelpMe</h3>
+
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#Pets">Find a Pet</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    <div class="footer-bottom">
+        &copy; 2024 HelpMe | Designed by Pet Lovers
+    </div>
+</footer>
+
+    
+    
+    <!-- Script for handling cart functionality -->
+    <script>
+        function addToCart(pet_id) {
+            const user_id = getUserId(); // Fetch the user ID dynamically from localStorage
+            if (!user_id) {
+                alert('Please log in to add items to your cart.');
+                return;
+            }
+            
+            fetch('http://localhost:3001/add-to-cart', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: user_id, pet_id: pet_id }) // Use pet_id directly from function argument
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    
+        function getUserId() {
+            // Retrieve the user ID from local storage
+            const userId = localStorage.getItem('userId');
+            // Return the user ID
+            return userId;
+        }
+    </script>
+
+</body>
+</html>

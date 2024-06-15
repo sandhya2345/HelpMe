@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        .cart-item { border: 1px solid #ccc; padding: 16px; margin: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <div id="cart-items"></div>
+    <button onclick="completeOrder()">Complete Order</button> 
+    <a href="index.html">Back to Shop</a>
+
+    <script>
+    
+        function getUserId() {
+        // Retrieve the user ID from local storage
+        const userId = localStorage.getItem('userId');
+        // Return the user ID
+        return userId;
+        }       
+
+
+        // Fetch and display cart items
+        const user_id = getUserId(); // Get the user ID dynamically
+        fetch(`/cart/${user_id}`)
+            .then(response => response.json())
+            .then(cartItems => {
+                const cartItemsContainer = document.getElementById('cart-items');
+                cartItemsContainer.innerHTML = cartItems.map(item => `
+                    <div class="cart-item">
+                        <h2>${item.animal_name}</h2>
+                        <p>Price: $${item.price}</p>  
+                    </div>
+                `).join('');
+            });
+
+        function completeOrder() {
+            const user_id = getUserId(); // Get the user ID dynamically
+            fetch('/complete-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ user_id: user_id })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                window.location.href = 'index.html'; // Redirect to shop page after order completion
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>

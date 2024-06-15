@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+    <style>
+
+        h2 {
+            color: rgb(1, 145, 145);
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"],
+        input[type="password"],
+        select {
+
+            width: 50%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        img{
+            width: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: auto;
+        }
+        
+
+        
+        button {
+            padding: 10px 20px;
+            background-color:teal;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #00050a;
+        }
+    </style>
+
+</head>
+
+<div class="pic">
+    <img src="page1.png" alt="">
+</div>
+
+<!-- This code is running smoothly -->
+ <body>
+    <h2>Sign up</h2>
+
+    <form id="signupForm" onSubmit="handleSubmit(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required onChange="handleChange(event)">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required onChange="handleChange(event)">
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required onChange="handleChange(event)">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required onChange="handleChange(event)">
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required onChange="handleChange(event)">
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+            alert('Form submitted successfully!');
+            const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            password: document.getElementById('password').value,
+            confirmPassword: document.getElementById('confirmPassword').value
+        };
+
+        fetch('http://localhost:3001/pet_adoption', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
+           
+        
+        function handleChange(event) {
+            
+        }
+    </script>
+
+  
+
+</body>
+</html>
+
+
+
+  
+     
+  

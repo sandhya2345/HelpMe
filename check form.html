@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption & Donation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Pet Adoption & Donation</h2>
+    <form id="petForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="action">Choose an action:</label>
+        <select id="action" name="action" onchange="toggleForm()">
+            <option value="adopt">Adopt a Pet</option>
+            <option value="donate">Donate a Pet</option>
+        </select>
+
+        <div id="adoptForm">
+            <label for="petType">Preferred Pet Type:</label>
+            <input type="text" id="petType" name="petType">
+        </div>
+
+        <div id="donateForm" style="display:none;">
+            <label for="petDetails">Pet Details:</label>
+            <input type="text" id="petDetails" name="petDetails">
+        </div>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</div>
+
+<script>
+    function toggleForm() {
+        var action = document.getElementById('action').value;
+        var adoptForm = document.getElementById('adoptForm');
+        var donateForm = document.getElementById('donateForm');
+
+        if (action === 'adopt') {
+            adoptForm.style.display = 'block';
+            donateForm.style.display = 'none';
+        } else if (action === 'donate') {
+            adoptForm.style.display = 'none';
+            donateForm.style.display = 'block';
+        }
+    }
+
+    function submitForm() {
+        // Add your form submission logic here
+        alert('Form submitted successfully!');
+    }
+</script>
+
+</body>
+</html>
+
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px; 
+    background-color: black; 
+    color: white; 
+    text-decoration: none; 
+    border-radius: 10px;
+    transition: background-color 0.3s ease; 
+}
+
+.btn:hover {
+    background-color: teal; 
+}
